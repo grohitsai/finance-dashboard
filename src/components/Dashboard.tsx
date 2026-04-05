@@ -5,12 +5,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 
 const Dashboard: React.FC = () => {
   const { state } = useApp();
-  const [lineChartKey, setLineChartKey] = useState(0);
-  const [pieChartKey, setPieChartKey] = useState(0);
   const [activePieIndex, setActivePieIndex] = useState<number | null>(null);
-
-  const handleLineHover = () => setLineChartKey(prev => prev + 1);
-  const handlePieHover = () => setPieChartKey(prev => prev + 1);
 
   const renderActiveShape = (props: any) => {
     const RADIAN = Math.PI / 180;
@@ -95,9 +90,8 @@ const Dashboard: React.FC = () => {
   return (
     <div className="p-6 space-y-8">
       {/* Welcome Section */}
-      <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm transform transition duration-300 hover:scale-105 hover:shadow-lg">
-        <p className="text-sm text-gray-500 dark:text-gray-400">Good Evening, Rohit 👋</p>
-        <h2 className="mt-1 text-2xl font-semibold text-gray-900 dark:text-white">Here’s your financial overview</h2>
+      <div className="bg-white dark:bg-gray-800 px-4 py-2 rounded-2xl shadow-sm">
+        <p className="text-sm text-gray-500 dark:text-gray-400">Good Evening, User 👋 — Here’s your financial overview</p>
       </div>
 
       {/* Summary Cards */}
@@ -110,17 +104,14 @@ const Dashboard: React.FC = () => {
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Balance Over Time */}
-        <div
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg"
-          onMouseEnter={handleLineHover}
-        >
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
             <span className="mr-2">📊</span>
             Balance Over Time
           </h3>
           {hasTransactions ? (
             <ResponsiveContainer width="100%" height={300}>
-              <LineChart key={lineChartKey} data={balanceData}>
+              <LineChart data={balanceData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />
                 <YAxis />
@@ -136,17 +127,14 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Spending by Category */}
-        <div
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg"
-          onMouseEnter={handlePieHover}
-        >
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
             <span className="mr-2">🥧</span>
             Spending by Category
           </h3>
           {pieData.length > 0 ? (
             <ResponsiveContainer width="100%" height={300}>
-              <PieChart key={pieChartKey}>
+              <PieChart>
                 <Pie
                   data={pieData}
                   cx="50%"
@@ -165,7 +153,6 @@ const Dashboard: React.FC = () => {
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
-                <Tooltip formatter={(value) => [`₹${value}`, 'Amount']} />
               </PieChart>
             </ResponsiveContainer>
           ) : (
