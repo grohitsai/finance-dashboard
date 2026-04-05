@@ -97,9 +97,12 @@ const Transactions: React.FC = () => {
 
   return (
     <div className="p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Transactions</h2>
-        <div className="flex space-x-2">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-6 border-b border-gray-200 dark:border-gray-700 pb-4">
+        <div>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">Transactions</h2>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Track your expenses, income, and reporting activity in one place.</p>
+        </div>
+        <div className="flex flex-wrap gap-2 mt-4 md:mt-0">
           <button
             onClick={exportToCSV}
             className="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600"
@@ -185,7 +188,7 @@ const Transactions: React.FC = () => {
           </thead>
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             {filteredTransactions.map((transaction) => (
-              <tr key={transaction.id} className="hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-150">
+              <tr key={transaction.id} className="hover:bg-green-100 dark:hover:bg-green-900/30 transition duration-300">
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                   {new Date(transaction.date).toLocaleDateString()}
                 </td>
@@ -225,17 +228,17 @@ const Transactions: React.FC = () => {
         </table>
         {filteredTransactions.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-6xl mb-4">📊</div>
+            <div className="text-6xl mb-4">📈</div>
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-              No transactions yet
+              No transactions yet.
             </h3>
             <p className="text-gray-500 dark:text-gray-400 mb-4">
-              Start by adding your first transaction to track your finances.
+              Start tracking your expenses to see your financial overview.
             </p>
             {state.role === 'Admin' && (
               <button
                 onClick={() => setShowAddForm(true)}
-                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300 hover:scale-105"
               >
                 Add Your First Transaction
               </button>
