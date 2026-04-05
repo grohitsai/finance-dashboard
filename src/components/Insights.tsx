@@ -37,7 +37,7 @@ const Insights: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Key Metrics */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Financial Overview</h3>
           <div className="space-y-2">
             <div className="flex justify-between">
@@ -58,7 +58,7 @@ const Insights: React.FC = () => {
         </div>
 
         {/* Highest Spending Category */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Top Spending Category</h3>
           <div className="text-center">
             <p className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{highestSpendingCategory[0]}</p>
@@ -67,7 +67,7 @@ const Insights: React.FC = () => {
         </div>
 
         {/* Monthly Comparison */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Monthly Performance</h3>
           <div className="space-y-2">
             {monthlyComparison.slice(-3).map(({ month, net }) => (
@@ -83,13 +83,13 @@ const Insights: React.FC = () => {
       </div>
 
       {/* Category Breakdown */}
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300">
         <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Spending by Category</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {Object.entries(categoryExpenses)
             .sort(([,a], [,b]) => b - a)
             .map(([category, amount]) => (
-            <div key={category} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30">
+            <div key={category} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20">
               <p className="font-medium text-gray-900 dark:text-white">{category}</p>
               <p className="text-lg font-bold text-red-600">₹{amount.toLocaleString()}</p>
             </div>
@@ -98,7 +98,7 @@ const Insights: React.FC = () => {
       </div>
 
       {/* Recommendations */}
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:shadow-lg">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300">
         <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Recommendations</h3>
         <ul className="space-y-2 text-gray-700 dark:text-gray-300">
           {highestSpendingCategory[0] !== 'None' && (

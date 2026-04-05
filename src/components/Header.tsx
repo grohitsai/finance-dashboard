@@ -25,30 +25,30 @@ const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
         <nav className="flex space-x-4">
           <button
             onClick={() => setCurrentPage('dashboard')}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-md transform transition duration-300 ${
               currentPage === 'dashboard'
-                ? 'bg-blue-500 text-white'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                ? 'bg-blue-500 text-white shadow-lg'
+                : 'text-gray-700 dark:text-gray-300 bg-transparent hover:bg-blue-100 dark:hover:bg-blue-600 hover:text-blue-700 dark:hover:text-white hover:scale-105'
             }`}
           >
             Dashboard
           </button>
           <button
             onClick={() => setCurrentPage('transactions')}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-md transform transition duration-300 ${
               currentPage === 'transactions'
-                ? 'bg-blue-500 text-white'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                ? 'bg-blue-500 text-white shadow-lg'
+                : 'text-gray-700 dark:text-gray-300 bg-transparent hover:bg-blue-100 dark:hover:bg-blue-600 hover:text-blue-700 dark:hover:text-white hover:scale-105'
             }`}
           >
             Transactions
           </button>
           <button
             onClick={() => setCurrentPage('insights')}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-md transform transition duration-300 ${
               currentPage === 'insights'
-                ? 'bg-blue-500 text-white'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                ? 'bg-blue-500 text-white shadow-lg'
+                : 'text-gray-700 dark:text-gray-300 bg-transparent hover:bg-blue-100 dark:hover:bg-blue-600 hover:text-blue-700 dark:hover:text-white hover:scale-105'
             }`}
           >
             Insights

@@ -188,7 +188,7 @@ const Transactions: React.FC = () => {
           </thead>
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             {filteredTransactions.map((transaction) => (
-              <tr key={transaction.id} className="hover:bg-green-100 dark:hover:bg-green-900/30 transition duration-300">
+              <tr key={transaction.id} className="hover:bg-green-100 dark:hover:bg-green-200/20 transition duration-300">
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">
                   {new Date(transaction.date).toLocaleDateString()}
                 </td>
