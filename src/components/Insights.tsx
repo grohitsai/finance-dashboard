@@ -33,12 +33,12 @@ const Insights: React.FC = () => {
 
   return (
     <div className="p-6 space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Insights</h2>
+      <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Insights</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Key Metrics */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
-          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Financial Overview</h3>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Financial Overview</h3>
           <div className="space-y-2">
             <div className="flex justify-between">
               <span className="text-gray-600 dark:text-gray-400">Total Income:</span>
@@ -58,17 +58,17 @@ const Insights: React.FC = () => {
         </div>
 
         {/* Highest Spending Category */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
-          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Top Spending Category</h3>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Top Spending Category</h3>
           <div className="text-center">
-            <p className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{highestSpendingCategory[0]}</p>
+            <p className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">{highestSpendingCategory[0]}</p>
             <p className="text-gray-600 dark:text-gray-400">₹{highestSpendingCategory[1].toLocaleString()} spent</p>
           </div>
         </div>
 
         {/* Monthly Comparison */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
-          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Monthly Performance</h3>
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Monthly Performance</h3>
           <div className="space-y-2">
             {monthlyComparison.slice(-3).map(({ month, net }) => (
               <div key={month} className="flex justify-between">
@@ -84,13 +84,13 @@ const Insights: React.FC = () => {
 
       {/* Category Breakdown */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300">
-        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Spending by Category</h3>
+        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Spending by Category</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {Object.entries(categoryExpenses)
             .sort(([,a], [,b]) => b - a)
             .map(([category, amount]) => (
-            <div key={category} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20">
-              <p className="font-medium text-gray-900 dark:text-white">{category}</p>
+            <div key={category} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
+              <p className="font-medium text-gray-900 dark:text-gray-100">{category}</p>
               <p className="text-lg font-bold text-red-600">₹{amount.toLocaleString()}</p>
             </div>
           ))}
@@ -99,7 +99,7 @@ const Insights: React.FC = () => {
 
       {/* Recommendations */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300">
-        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Recommendations</h3>
+        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">Recommendations</h3>
         <ul className="space-y-2 text-gray-700 dark:text-gray-300">
           {highestSpendingCategory[0] !== 'None' && (
             <li>• Consider reducing expenses in {highestSpendingCategory[0]} to improve savings.</li>

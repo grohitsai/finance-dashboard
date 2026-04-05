@@ -130,7 +130,7 @@ const Dashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Balance Over Time */}
         <div
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300 hover:bg-blue-100 dark:hover:bg-blue-200/20 hover:shadow-lg"
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20"
           onMouseEnter={handleLineContainerEnter}
           onMouseLeave={handleLineContainerLeave}
         >
@@ -156,7 +156,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Spending by Category */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
             <span className="mr-2">🥧</span>
             Spending by Category

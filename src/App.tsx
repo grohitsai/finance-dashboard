@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import Transactions from './components/Transactions';
 import Insights from './components/Insights';
-import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard');
