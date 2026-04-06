@@ -21,6 +21,10 @@ A clean and responsive Finance Dashboard built with React, TypeScript, Tailwind 
 - **State Management**: React Context API with useReducer
 - **Build Tool**: Vite
 
+## Live Demo
+
+View the live application at: [https://finance-dashboard-brown-theta.vercel.app/](https://finance-dashboard-brown-theta.vercel.app/)
+
 ## Getting Started
 
 ### Prerequisites
@@ -30,7 +34,7 @@ A clean and responsive Finance Dashboard built with React, TypeScript, Tailwind 
 
 ### Installation
 
-1. Clone the repository
+1. Clone the repository: `git clone https://github.com/grohitsai/finance-dashboard.git`
 2. Install dependencies:
    ```bash
    npm install
