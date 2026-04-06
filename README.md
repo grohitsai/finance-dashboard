@@ -1,98 +1,140 @@
-# Finance Dashboard
+# 💰 Finance Dashboard
 
-A clean and responsive Finance Dashboard built with React, TypeScript, Tailwind CSS, and Recharts.
+A modern and responsive **Finance Dashboard** built using **React, TypeScript, Tailwind CSS, and Recharts**.
+This application provides a clear overview of financial data with interactive visualizations and a smooth user experience.
 
-## Features
+---
 
-- **Dashboard Overview**: Summary cards for Balance, Income, and Expenses
-- **Charts**: Line chart for balance over time, Pie chart for spending by category
-- **Transactions Management**: View, search, filter, and sort transactions
-- **Role-Based UI**: Viewer mode (read-only) and Admin mode (full access)
-- **Insights**: Simple financial insights and recommendations
-- **Dark Mode**: Toggle between light and dark themes
-- **Data Persistence**: Transactions stored in localStorage
-- **Export**: Export transactions as CSV
+## 🚀 Features
 
-## Tech Stack
+* 📊 **Dashboard Overview**
+  Displays Total Balance, Income, and Expenses using summary cards
 
-- **Frontend**: React 19, TypeScript
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts
-- **State Management**: React Context API with useReducer
-- **Build Tool**: Vite
+* 📈 **Interactive Charts**
 
-## Live Demo
+  * Line chart for balance over time
+  * Pie chart for spending by category
 
-View the live application at: [https://finance-dashboard-brown-theta.vercel.app/](https://finance-dashboard-brown-theta.vercel.app/)
+* 🔍 **Transactions Management**
+  Search, filter, and sort transactions easily
 
-## Getting Started
+* 👤 **Role-Based UI**
+
+  * Viewer Mode (read-only)
+  * Admin Mode (full access)
+
+* 💡 **Insights**
+  Basic financial insights and recommendations
+
+* 🌙 **Dark Mode**
+  Toggle between light and dark themes
+
+* 💾 **Data Persistence**
+  Data stored in localStorage
+
+* 📤 **Export Feature**
+  Download transactions as CSV
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**: React 19, TypeScript
+* **Styling**: Tailwind CSS
+* **Charts**: Recharts
+* **State Management**: React Context API with useReducer
+* **Build Tool**: Vite
+
+---
+
+## 🌐 Live Demo
+
+👉 https://finance-dashboard-brown-theta.vercel.app/
+
+> The deployed version is fully functional and recommended for use.
+
+---
+
+## ⚙️ Getting Started (Optional)
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm or yarn
+* Node.js (v18 or higher)
+* npm or yarn
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/grohitsai/finance-dashboard.git`
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/grohitsai/finance-dashboard.git
+cd finance-dashboard
+npm install
+npm run dev
+```
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+> If you face any issues running locally, please use the live deployed version.
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+---
 
-### Build for Production
+## 📦 Build for Production
 
 ```bash
 npm run build
 ```
 
-## Project Structure
+---
+
+## 📁 Project Structure
 
 ```
 src/
-├── components/          # Reusable UI components
-│   ├── Header.tsx       # App header with navigation
-│   ├── Dashboard.tsx    # Main dashboard page
-│   ├── Transactions.tsx # Transactions management page
-│   ├── Insights.tsx     # Insights and analytics page
-│   └── SummaryCard.tsx  # Summary card component
-├── contexts/            # React Context for state management
-│   └── AppContext.tsx   # App state and actions
-├── data/                # Mock data
-│   └── mockData.ts      # Sample transactions
-├── types/               # TypeScript type definitions
-│   └── index.ts         # App types
-├── App.tsx              # Main app component
-├── main.tsx             # App entry point
-└── index.css            # Global styles with Tailwind
+├── components/
+│   ├── Header.tsx
+│   ├── Dashboard.tsx
+│   ├── Transactions.tsx
+│   ├── Insights.tsx
+│   └── SummaryCard.tsx
+├── contexts/
+│   └── AppContext.tsx
+├── data/
+│   └── mockData.ts
+├── types/
+│   └── index.ts
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
 
-## State Management
+---
 
-The app uses React Context API with useReducer for state management:
+## 🧠 State Management
 
-- **Transactions**: Array of transaction objects
-- **Filters**: Search, category, type, sort options
-- **Role**: Viewer or Admin
-- **Dark Mode**: Theme toggle
+The application uses **React Context API with useReducer** to manage:
 
-Data is persisted in localStorage and loaded on app start.
+* Transactions data
+* Filters (search, category, sorting)
+* User roles (Viewer/Admin)
+* Theme (Light/Dark mode)
 
-## Mock Data
+All data is persisted using **localStorage**.
 
-The app includes sample transaction data for demonstration. In a real application, this would be replaced with API calls.
+---
 
-## Responsive Design
+## 📱 Responsive Design
 
-The dashboard is fully responsive and works on desktop, tablet, and mobile devices.
+Fully responsive and optimized for:
 
-## License
+* Desktop
+* Tablet
+* Mobile
 
-This project is for educational purposes.
+---
+
+## 📌 Note
+
+This project is built for **educational and demonstration purposes**.
+
+---
+
+## 📄 License
+
+This project is for educational use only.
