@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+﻿import React, { useState, useMemo, useCallback } from 'react';
 import { useApp } from '../contexts/AppContext';
 import SummaryCard from './SummaryCard';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -116,26 +116,26 @@ const Dashboard: React.FC = () => {
     <div className="p-6 space-y-8">
       {/* Welcome Section */}
       <div className="bg-white dark:bg-gray-800 px-4 py-2 rounded-2xl shadow-sm">
-        <p className="text-sm text-gray-500 dark:text-gray-400">Good Evening, User 👋 — Here’s your financial overview</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400">Good Evening, User ≡ƒæï ΓÇö HereΓÇÖs your financial overview</p>
       </div>
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <SummaryCard title="Total Balance" value={totalBalance} icon="💰" />
-        <SummaryCard title="Total Income" value={totalIncome} icon="📈" />
-        <SummaryCard title="Total Expenses" value={totalExpenses} icon="📉" />
+        <SummaryCard title="Total Balance" value={totalBalance} icon="≡ƒÆ░" />
+        <SummaryCard title="Total Income" value={totalIncome} icon="≡ƒôê" />
+        <SummaryCard title="Total Expenses" value={totalExpenses} icon="≡ƒôë" />
       </div>
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Balance Over Time */}
         <div
-          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20"
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300 hover:bg-blue-100 dark:hover:bg-blue-200/20 hover:shadow-lg"
           onMouseEnter={handleLineContainerEnter}
           onMouseLeave={handleLineContainerLeave}
         >
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
-            <span className="mr-2">📊</span>
+            <span className="mr-2">≡ƒôè</span>
             Balance Over Time
           </h3>
           {hasTransactions ? (
@@ -144,7 +144,7 @@ const Dashboard: React.FC = () => {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" />
                 <YAxis />
-                <Tooltip formatter={(value) => [`₹${value}`, 'Balance']} />
+                <Tooltip formatter={(value) => [`Γé╣${value}`, 'Balance']} />
                 <Line type="monotone" dataKey="balance" stroke="#8884d8" strokeWidth={2} isAnimationActive />
               </LineChart>
             </ResponsiveContainer>
@@ -156,9 +156,9 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Spending by Category */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-transparent transform transition-all duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-400/20 dark:hover:border-blue-400 dark:hover:shadow-blue-400/20">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-300/20 hover:shadow-lg">
           <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white flex items-center">
-            <span className="mr-2">🥧</span>
+            <span className="mr-2">≡ƒÑº</span>
             Spending by Category
           </h3>
           {pieData.length > 0 ? (
@@ -176,7 +176,7 @@ const Dashboard: React.FC = () => {
       {/* Insights */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md transition duration-300">
         <h3 className="text-lg font-semibold mb-6 text-gray-900 dark:text-white flex items-center">
-          <span className="mr-2">💡</span>
+          <span className="mr-2">≡ƒÆí</span>
           Quick Insights
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -189,7 +189,7 @@ const Dashboard: React.FC = () => {
           <div>
             <p className="text-gray-600 dark:text-gray-400 mb-2">Average Monthly Expense</p>
             <p className="text-xl font-bold text-gray-900 dark:text-white">
-              ₹{Math.round(totalExpenses / 3).toLocaleString()} {/* Assuming 3 months of data */}
+              Γé╣{Math.round(totalExpenses / 3).toLocaleString()} {/* Assuming 3 months of data */}
             </p>
           </div>
         </div>
