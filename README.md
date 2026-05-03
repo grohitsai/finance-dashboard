@@ -5,6 +5,14 @@ This application provides a clear overview of financial data with interactive vi
 
 ---
 
+## 🌐 Live Demo
+
+👉 https://finance-dashboard-brown-theta.vercel.app/
+
+> The deployed version is fully functional and recommended for use.
+
+---
+
 ## 🚀 Features
 
 * 📊 **Dashboard Overview**
@@ -44,14 +52,6 @@ This application provides a clear overview of financial data with interactive vi
 * **Charts**: Recharts
 * **State Management**: React Context API with useReducer
 * **Build Tool**: Vite
-
----
-
-## 🌐 Live Demo
-
-👉 https://finance-dashboard-brown-theta.vercel.app/
-
-> The deployed version is fully functional and recommended for use.
 
 ---
 
